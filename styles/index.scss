@@ -21,6 +21,23 @@ $font-size-large: clamp(24px, 5vw, 26px);
 
 //!==============================
 
+//! Keyframes animations
+
+@keyframes floatingIcon {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+//!==============================
+
+// TODO: Optimizar el código creando mixins para los estilos en general
 //! Mixins
 
 //!==============================
@@ -63,11 +80,11 @@ header {
         line-height: 30px;
         font: {
             size: $font-size-large;
-            family: $font-montserrat;    
+            family: $font-montserrat;
         }
         text: {
             transform: uppercase;
-            align: center;    
+            align: center;
         }
     }
 }
@@ -77,18 +94,18 @@ header {
 //? ===================
 
 main {
-    padding: 30px 16px;
+    padding: 30px 18px;
     .main-title {
         max-width: 645px;
         margin: 0 auto 30px;
         color: #000;
         font: {
             size: $font-size-large;
-            family: $font-montserrat;    
+            family: $font-montserrat;
         }
         text: {
             transform: uppercase;
-            align: center;    
+            align: center;
         }
     }
 
@@ -110,26 +127,26 @@ main {
             line-height: 30px;
             font: {
                 size: $font-size-medium;
-                family: $font-montserrat;    
+                family: $font-montserrat;
             }
             text: {
-                align: center;    
+                align: center;
             }
             .title-card1 {
                 margin-bottom: 20px;
                 font: {
                     size: $font-size-large;
-                    family: $font-montserrat;    
+                    family: $font-montserrat;
                 }
                 text: {
-                    transform: uppercase;    
+                    transform: uppercase;
                 }
             }
             .text-card1 {
                 font: {
                     weight: 300;
                     size: $font-size-small;
-                    family: $font-montserrat;    
+                    family: $font-montserrat;
                 }
             }
             .warning-icon1 {
@@ -138,6 +155,7 @@ main {
                 top: -25px;
                 right: -15px;
                 color: #fff;
+                animation: floatingIcon 2s ease-in-out infinite;
             }
         }
         .info-card2 {
@@ -152,26 +170,26 @@ main {
             line-height: 30px;
             font: {
                 size: $font-size-medium;
-                family: $font-montserrat;    
+                family: $font-montserrat;
             }
             text: {
-                align: center;    
+                align: center;
             }
             .title-card2 {
                 margin-bottom: 20px;
                 font: {
                     size: $font-size-large;
-                    family: $font-montserrat;    
+                    family: $font-montserrat;
                 }
                 text: {
-                    transform: uppercase;    
+                    transform: uppercase;
                 }
             }
             .text-card2 {
                 font: {
                     weight: 300;
                     size: $font-size-small;
-                    family: $font-montserrat;    
+                    family: $font-montserrat;
                 }
             }
             .warning-icon2 {
@@ -180,6 +198,7 @@ main {
                 top: -25px;
                 right: -15px;
                 color: #fff;
+                animation: floatingIcon 2s ease-in-out infinite;
             }
         }
     }
@@ -190,11 +209,11 @@ main {
             color: #000;
             font: {
                 size: $font-size-large;
-                family: $font-montserrat;    
+                family: $font-montserrat;
             }
             text: {
                 transform: uppercase;
-                align: center;    
+                align: center;
             }
         }
         .consulta-card {
@@ -249,22 +268,22 @@ main {
     .social-media {
         .social-media-title {
             max-width: 645px;
-            margin: 40px auto 30px;
+            margin: 80px auto 30px;
             color: #000;
             font: {
                 size: $font-size-large;
-                family: $font-montserrat;    
+                family: $font-montserrat;
             }
             text: {
                 transform: uppercase;
-                align: center;    
+                align: center;
             }
         }
         .social-media-container {
             display: flex;
             justify-content: space-evenly;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 20px auto;
             .tiktok {
                 width: 80px;
             }
@@ -310,7 +329,37 @@ footer {
 //? MEDIA QUERIES
 //? ===================
 
-
+@media screen and (max-width: 470px) {
+    .info-cards-container {
+        margin-top: 50px !important;
+        gap: 40px !important;
+        .info-card1 {
+            .warning-icon1 {
+                top: -48px !important;
+            }
+        }
+        .info-card2 {
+            .warning-icon2 {
+                top: -48px !important;
+            }
+        }
+    }
+}
+@media screen and (max-width: 500px) {
+    .social-media {
+        .social-media-container {
+            .tiktok {
+                width: 60px !important;
+            }
+            .instagram {
+                width: 60px !important;
+            }
+            .facebook {
+                width: 60px !important;
+            }
+        }
+    }
+}
 
 // Imágen de cristian de la consulta-card
 @media screen and (min-width: 330px) {

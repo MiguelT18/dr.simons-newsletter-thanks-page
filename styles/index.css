@@ -1,3 +1,14 @@
+@keyframes floatingIcon {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 body {
   box-sizing: border-box;
   padding: 0;
@@ -38,7 +49,7 @@ header .header-title {
 }
 
 main {
-  padding: 30px 16px;
+  padding: 30px 18px;
 }
 main .main-title {
   max-width: 645px;
@@ -87,6 +98,7 @@ main .info-cards-container .info-card1 .warning-icon1 {
   top: -25px;
   right: -15px;
   color: #fff;
+  animation: floatingIcon 2s ease-in-out infinite;
 }
 main .info-cards-container .info-card2 {
   position: relative;
@@ -119,6 +131,7 @@ main .info-cards-container .info-card2 .warning-icon2 {
   top: -25px;
   right: -15px;
   color: #fff;
+  animation: floatingIcon 2s ease-in-out infinite;
 }
 main .consulta-en-linea .main-consulta-title {
   max-width: 645px;
@@ -178,7 +191,7 @@ main .consulta-en-linea .consulta-card .consulta-content .consulta-button:active
 }
 main .social-media .social-media-title {
   max-width: 645px;
-  margin: 40px auto 30px;
+  margin: 80px auto 30px;
   color: #000;
   font-size: clamp(24px, 5vw, 26px);
   font-family: "Montserrat", sans-serif;
@@ -189,7 +202,7 @@ main .social-media .social-media-container {
   display: flex;
   justify-content: space-evenly;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 main .social-media .social-media-container .tiktok {
   width: 80px;
@@ -225,6 +238,29 @@ footer .copyright {
   text-align: center;
 }
 
+@media screen and (max-width: 470px) {
+  .info-cards-container {
+    margin-top: 50px !important;
+    gap: 40px !important;
+  }
+  .info-cards-container .info-card1 .warning-icon1 {
+    top: -48px !important;
+  }
+  .info-cards-container .info-card2 .warning-icon2 {
+    top: -48px !important;
+  }
+}
+@media screen and (max-width: 500px) {
+  .social-media .social-media-container .tiktok {
+    width: 60px !important;
+  }
+  .social-media .social-media-container .instagram {
+    width: 60px !important;
+  }
+  .social-media .social-media-container .facebook {
+    width: 60px !important;
+  }
+}
 @media screen and (min-width: 330px) {
   .consulta-card {
     margin-top: 90px !important;
