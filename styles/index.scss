@@ -1,0 +1,335 @@
+//!==============================
+
+//! Variables
+
+// Paleta de Colores
+$sky-blue: #00a0f9;
+$light-blue: #6ea7d6;
+$cream-blue: #afcae3;
+$cream-white: #e9f4fc;
+$dark-grey: #3e3e3e;
+
+// Fuentes
+$font-open-sans: "Open Sans", sans-serif;
+$font-montserrat: "Montserrat", sans-serif;
+$font-timberline: timberline, sans-serif;
+
+// Tamaño de fuentes
+$font-size-small: clamp(18px, 5vw, 20px);
+$font-size-medium: clamp(20px, 5vw, 24px);
+$font-size-large: clamp(24px, 5vw, 26px);
+
+//!==============================
+
+//! Mixins
+
+//!==============================
+
+//! Reseteo de los estilos por defecto de los navegadores
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+p {
+    margin: 0;
+}
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+//!==============================
+
+//? ===================
+//? Header Styles
+//? ===================
+
+header {
+    padding: 20px 16px;
+    background-color: $sky-blue;
+    .header-title {
+        max-width: 645px;
+        margin: 0 auto;
+        color: #fff;
+        line-height: 30px;
+        font: {
+            size: $font-size-large;
+            family: $font-montserrat;    
+        }
+        text: {
+            transform: uppercase;
+            align: center;    
+        }
+    }
+}
+
+//? ===================
+//? Main Styles
+//? ===================
+
+main {
+    padding: 30px 16px;
+    .main-title {
+        max-width: 645px;
+        margin: 0 auto 30px;
+        color: #000;
+        font: {
+            size: $font-size-large;
+            family: $font-montserrat;    
+        }
+        text: {
+            transform: uppercase;
+            align: center;    
+        }
+    }
+
+    .info-cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        max-width: 1210px;
+        gap: 20px;
+        .info-card1 {
+            position: relative;
+            width: 100%;
+            max-width: 475px;
+            margin: 0 auto 20px;
+            padding: 20px;
+            background-image: linear-gradient(to bottom, $sky-blue, #0077ff);
+            border-radius: 10px;
+            color: #fff;
+            line-height: 30px;
+            font: {
+                size: $font-size-medium;
+                family: $font-montserrat;    
+            }
+            text: {
+                align: center;    
+            }
+            .title-card1 {
+                margin-bottom: 20px;
+                font: {
+                    size: $font-size-large;
+                    family: $font-montserrat;    
+                }
+                text: {
+                    transform: uppercase;    
+                }
+            }
+            .text-card1 {
+                font: {
+                    weight: 300;
+                    size: $font-size-small;
+                    family: $font-montserrat;    
+                }
+            }
+            .warning-icon1 {
+                width: 80px;
+                position: absolute;
+                top: -25px;
+                right: -15px;
+                color: #fff;
+            }
+        }
+        .info-card2 {
+            position: relative;
+            width: 100%;
+            max-width: 475px;
+            margin: 0 auto 20px;
+            padding: 20px;
+            background-image: linear-gradient(to bottom, $sky-blue, #0077ff);
+            border-radius: 10px;
+            color: #fff;
+            line-height: 30px;
+            font: {
+                size: $font-size-medium;
+                family: $font-montserrat;    
+            }
+            text: {
+                align: center;    
+            }
+            .title-card2 {
+                margin-bottom: 20px;
+                font: {
+                    size: $font-size-large;
+                    family: $font-montserrat;    
+                }
+                text: {
+                    transform: uppercase;    
+                }
+            }
+            .text-card2 {
+                font: {
+                    weight: 300;
+                    size: $font-size-small;
+                    family: $font-montserrat;    
+                }
+            }
+            .warning-icon2 {
+                width: 80px;
+                position: absolute;
+                top: -25px;
+                right: -15px;
+                color: #fff;
+            }
+        }
+    }
+    .consulta-en-linea {
+        .main-consulta-title {
+            max-width: 645px;
+            margin: 20px auto 30px;
+            color: #000;
+            font: {
+                size: $font-size-large;
+                family: $font-montserrat;    
+            }
+            text: {
+                transform: uppercase;
+                align: center;    
+            }
+        }
+        .consulta-card {
+            max-width: 460px;
+            margin: 0 auto;
+            display: flex;
+            position: relative;
+            background-image: linear-gradient(to bottom, $sky-blue, #0077ff);
+            box-shadow: 4px 4px 10px #000;
+            padding: 20px;
+            border-radius: 8px;
+            .consulta-content {
+                max-width: 300px;
+                .consulta-title {
+                    color: #fff;
+                    text-transform: uppercase;
+                    font-family: "Montserrat", sans-serif;
+                    font-size: clamp(20px, 5vw, 24px);
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                }
+                .consulta-description {
+                    color: #fff;
+                    font-size: clamp(18px, 5vw, 20px);
+                    font-family: "Open Sans", sans-serif;
+                    font-weight: 100;
+                    margin-bottom: 20px;
+                }
+                .consulta-button {
+                    width: 200px;
+                    border: none;
+                    border-radius: 8px;
+                    padding: 10px 20px;
+                    color: #000;
+                    background-color: #fff;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    font-size: clamp(18px, 5vw, 20px);
+                    font-family: "Montserrat", sans-serif;
+                    cursor: pointer;
+                }
+                .consulta-button:hover {
+                    background-color: #f1f1f1;
+                }
+                .consulta-button:active {
+                    scale: 0.9;
+                }
+            }
+        }
+    }
+
+    .social-media {
+        .social-media-title {
+            max-width: 645px;
+            margin: 40px auto 30px;
+            color: #000;
+            font: {
+                size: $font-size-large;
+                family: $font-montserrat;    
+            }
+            text: {
+                transform: uppercase;
+                align: center;    
+            }
+        }
+        .social-media-container {
+            display: flex;
+            justify-content: space-evenly;
+            max-width: 800px;
+            margin: 0 auto;
+            .tiktok {
+                width: 80px;
+            }
+            .instagram {
+                width: 80px;
+            }
+            .facebook {
+                width: 80px;
+            }
+        }
+    }
+}
+
+//? ===================
+//? Footer Styles
+//? ===================
+
+footer {
+    padding: 0 16px 20px;
+    background-color: $sky-blue;
+    .logos-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: -25px;
+        .cristian-logo {
+            width: 100%;
+            max-width: 150px;
+        }
+        .fabrica-logo {
+            width: 100%;
+            max-width: 150px;
+        }
+    }
+    .copyright {
+        color: #fff;
+        font-size: $font-size-small;
+        font-family: $font-open-sans;
+        text-align: center;
+    }
+}
+
+//? ===================
+//? MEDIA QUERIES
+//? ===================
+
+
+
+// Imágen de cristian de la consulta-card
+@media screen and (min-width: 330px) {
+    .consulta-card {
+        margin-top: 90px !important;
+        .consulta-content {
+            z-index: 1;
+        }
+        .consulta-image {
+            display: block !important;
+            width: 164px;
+            position: absolute;
+            right: -10px;
+            top: -89px;
+        }
+    }
+}
+@media screen and (min-width: 400px) {
+    .consulta-image {
+        top: -80px !important;
+    }
+}
